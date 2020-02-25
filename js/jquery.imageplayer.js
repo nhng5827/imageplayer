@@ -159,7 +159,7 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
                 if (i > images.length - 1) {
                     i = 0;
                     handle = document.getElementById('range');
-                    handle.value = 0
+                    handle.value = 0;
                 }
             }
             if (i < images.length) {
@@ -198,7 +198,7 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
                 elem.attr('class', 'play');
                 clearTimeout(rotator);
                 handle = document.getElementById('range');
-                handle.value = handle.value - 1   
+                handle.value = handle.value - 1;   
                 i--;
             } else { // paused (we have to resume playback)
                 image_cycle();
@@ -215,7 +215,7 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
             clearTimeout(rotator);
 			i = (i - 1 < 0) ? 0 : i - 1;
             handle = document.getElementById('range');
-            handle.value = i  
+            handle.value = i;  
             if(play_pause.attr('class') === 'pause') { 
                 image_cycle();
             } else { // was playing
@@ -229,7 +229,7 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
             clearTimeout(rotator);
 			i = (i + 1 > images.length - 1) ? images.length - 1 : i + 1;
             handle = document.getElementById('range');
-            handle.value = i  
+            handle.value = i;  
             if(play_pause.attr('class') === 'pause') { 
                 image_cycle();
             } else { // was playing
@@ -243,7 +243,7 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
             clearTimeout(rotator);
             i = 0;
             handle = document.getElementById('range');
-            handle.value = 0  
+            handle.value = 0;  
             if(play_pause.attr('class') === 'pause') { 
                 image_cycle();
             } else { // was playing
@@ -257,7 +257,7 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
             clearTimeout(rotator);
             i = images.length - 1;
             handle = document.getElementById('range');
-            handle.value = handle.max  
+            handle.value = handle.max;  
             scrubber_handle.css('left', i*inc + 'px');
             if(play_pause.attr('class') === 'pause') {
                 image_cycle();
@@ -300,7 +300,6 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
         }
         
         function handle_scrubber_drag(e, elem) {
-            var pos, x_coord, delta_p, delta_n;
             e.preventDefault();
             elem = $(elem, player);
             clearTimeout(rotator);
@@ -317,11 +316,11 @@ if (typeof(jQuery) == 'undefined') alert('jQuery library was not found.');
        
          function handle_speed_up(e,elem) {
             e.preventDefault();
-            settings.delay = settings.delay - 1/50 
+            settings.delay = settings.delay - 1/50; 
          }
          function handle_speed_down(e,elem) {
             e.preventDefault();
-            settings.delay = settings.delay + 1/50
+            settings.delay = settings.delay + 1/50;
          }
     };
  
